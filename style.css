@@ -37,6 +37,7 @@ body {
   /*URL é uma função*/
   /* pode tambem agrupar todos estes em uma linha só de codigo - expemplo:*/
   background: var(--bg-url) no-repeat top center/ cover;
+  height: 100vh;
 }
 
 body * {
@@ -174,4 +175,13 @@ footer{
   padding:24px 0;
   text-align: center;
   font-size: 14px;
+}
+/*media queries */
+/*tudo que começaã com o arroba (@) é uma at rum*/
+/*para aumentar ou diminuir para diferentes dispositivos*/
+@media (min-width: 700px) {
+  :root {
+    --br-url: url(./asstets/bg.jpg);
+  }
+  .light {--bg-url: url(./asstets/bg light.jpg);}
 }
