@@ -45,10 +45,11 @@ body * {
 }
 
 #container {
-  width: 360px;
+  width: 100%;
   /*largura da caixa*/
   /*altura da caixa*/
   /*cor da caixa*/
+  max-width: 588px;
   margin: auto;
   margin-top: 56px;
   padding:0 24px;
