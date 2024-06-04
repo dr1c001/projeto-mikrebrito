@@ -92,9 +92,15 @@ body * {
   z-index:1;
   top:50%;/*subiu uma camada*/
   transform:translateY(-50%);
+  animation: slide-back 0.2s;
 }
-.light #switch button{right:0;
-left: initial;}
+.light #switch button{
+  animation: slide-in 0.4s forwards;
+}
+
+#switch button:hover{
+  outline:8px solid var(--highlight-color);
+}
 
 #switch span{
   display: block;
@@ -113,9 +119,9 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 16px;
-
-  padding: 24px 0;
-} /*none - significa nenhum*/
+padding: 24px 0;
+  
+} /*npadding: 24px 0;one - significa nenhum*/
 ul li a {
   display: flex;
   align-items: center;
@@ -184,4 +190,13 @@ footer{
     --br-url: url(./asstets/bg.jpg);
   }
   .light {--bg-url: url(./asstets/bg light.jpg);}
+}
+/* adicionar at rum para animações uma delas é a:*/
+@keyframes slide-in{
+  from {left: 0;}
+  to{left:50%}
+}
+@keyframes slide-back{
+  from{left:50%;}
+  to{left:0;}
 }
