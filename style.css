@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+   --text-color: white;
+   /*root significa raiz, quer dizer: parte fundamental do html*/
+   --bg-url:url(./asstets/bg-mobile.jpg);
+   --stroke-color: rgba(255,255,255,0.5);
+   --surface-color: rgba(255,255,255, 0.05);
+   --surface-color-hover: rgba(0,0,0,0.05);
+   --highlight-color: rgba(255,255,255, 0.2);
+   --switch-bg-url: url(asstets/mon.svg)
+  }
+
+.light{
+  --text-color:black;
+  --bg-url:url(asstets/bg-mobile-light.jpg);
+/*definindo todas as letras e icones para preto para outra pagina*/
+--stroke-color: rgba(0,0,0,0.5);
+--surface-color: rgba(0,0,0, 0.05);
+--surface-color-hover: rgba(0,0,0,0.05);
+ --highlight-color: rgba(0,0,0,0.1);
+ --switch-bg-url: url(asstets/sun.svg)
+}
+
+body {
+  /*background-image: url(./asstets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  /*para não repetir a imagem*/
+  /*background-position: top center;
+  /*para orientar os eixos X e eixo Y*/
+  /*background-size: cover;
+  /*para cobrir toda a tela com uma só imagem*/
+  /*URL é uma função*/
+  /* pode tambem agrupar todos estes em uma linha só de codigo - expemplo:*/
+  background: var(--bg-url) no-repeat top center/ cover;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  width: 360px;
+  /*largura da caixa*/
+  /*altura da caixa*/
+  /*cor da caixa*/
+  margin: auto;
+  margin-top: 56px;
+  padding:0 24px;
+  /*ou pode ser escrito : margin:56px auto 0px;*/
+  /*centralizar a caixa*/
+}
+#profire {
+  text-align: center;
+  padding: 24px;
+}
+#profire img {
+  display: block;
+
+  width: 112px;
+  margin: auto;
+}
+#profire p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 8px;
+}
+/*link - listas*/
+
+#switch {
+  position: relative;
+   width:64px;
+  margin:4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background:white var(--switch-bg-url) no-repeat center;
+  border:0;
+  border-radius:50%;
+  position: absolute; /*posicionamento absoluto*/
+  left: 0;
+  z-index:1;
+  top:50%;/*subiu uma camada*/
+  transform:translateY(-50%);
+}
+.light #switch button{right:0;
+left: initial;}
+
+#switch span{
+  display: block;
+  width:64px;
+  height:24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter:blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius:9999px;
+}
+
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 24px 0;
+} /*none - significa nenhum*/
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  /*ou pode ser usado o -height: 52px*/
+  background: var(--surface-color);
+  border: solid var(--stroke-color);
+  border-radius:8px;
+  /*arredondamento de borda*/
+  backdrop-filter: blur(4px);
+  /*nitidez das bordas*/
+  -webkit-backdrop-filter: blur(4px);
+  /*-webkit - prefixo que alguns brouser usa ara liberar*/ 
+
+  text-decoration:none;
+  /*para tirar a linha de baixo das palavras*/
+  font-weight:500;
+  /*fonte*/
+  transition: background 0.2s;
+  /*transição de hora de entrar na pagina, desliza */
+}
+
+ul li a:hover { 
+  /* pseudo-selector*/
+   background: rgba(255,255,255, 0.05) ;
+  border: 1,5px solid var(--text-color);
+}
+/*social links*/
+#social-links {
+  display: flex;
+  justify-content:center;
+  gap:16px;
+  /*para alinhar os icones no meio*/
+  padding: 24px 0;
+  font-size: 24px;
+  /*font-size muda os tamanhos dos icones*/
+  
+}
+
+#social-links a {
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  /*para alinhar os icones no meio do circulo*/
+  padding:16px;
+  transition: background 0.2s;
+  border-radius:50%;
+}
+
+#social-links a:hover {
+  background: var(--highlight-color);
+  border-radius:50%;
+
+}
+footer{
+  padding:24px 0;
+  text-align: center;
+  font-size: 14px;
+}

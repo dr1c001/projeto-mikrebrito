@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--definindo um documento HTML 5 -->
+<html lang="pr-br" class="">
+  <!--class=light - significa ir para outro modo-->
+  <!--documento em si: documento RAIZ. lang  -linguagem-->
+  <head>
+    <!--HEAD - é a TAG responsavel por ajustar as configurações do nosso texto-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8" />
+    <!--define quais o conjunto de caracteres que vamos usar nesta pagina-->
+    <meta http-equiv="x-au-compatible" content="ie=edge" />
+    <!--para fazer a compatibilidade com navegadores antigos-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--vielport é tudo que esta visivel no corpo da pagina,fica escondido atras do BODY E TENHA CONTEUDO COM LARGURA DO DISPOSITIVO QUE ABRIR-E ZOOM-->
+    <title>Projeto 1 ADRIEL</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <!--parte visivel da pagina-
+      HEAD: CABEÇA, BODY: CORPO-->
+    <div id="container">
+    <!--caixa generica, não tem estilos que o brouser aplica nela-->
+      <div id="profire">
+        <img src="./asstets/avatar.png"
+        alt="foto de mike brito sorrindo usando oculos, sem barba e fundo colorido"/>
+        
+        <p>@mikebrito </p>
+      </div>
+      <!--ATT : alternativo-->
+      <div id="switch" onclick="toggleMode()">
+        <!--esta função onclick = toggoemode, ela vai escolher a função do java script-->
+        <button>
+        
+        </button>
+        <span>
+          <!--imagem-->
+
+        </span>
+
+      </div>
+      <!--é uma caixa-->
+      <ul>
+        <!--quer dizer que quero fazer listas-->
+        <li>
+          <!--é para criar uma lista-->
+          <a href="#">Inscrever-se no nlw
+            <!--# significa que não vai para lugar nenhum--></a>
+            <!--significa para colocar um linh-->
+        </li>
+        <li>
+          <a href="#">Baixar meu Ebook</a>
+        </li>
+        <li>
+          <a href="https://github.com/maykbrito"
+          target="_blank">Ver meu portifólio</a>
+        </li>
+        <li>
+          <a href="https://rocketseat.com.br/explorer"
+          target="_blank">Conheça o explorer</a>
+        </li>
+      </ul>
+      <div id="social-links">
+        <a href="https://github.com/maykbrito" target="_blank">
+          <ion-icon  name = "logo-github"> 
+          </ion-icon>
+        </a>
+        <a href="https://instagram.com/maykbrito" target="_blank">
+          <ion-icon  name = "logo-instagram"> 
+          </ion-icon>
+        </a>
+        <a href="https://youtube.com/maykbrito" target="_blank">
+          <ion-icon  name = "logo-youtube"> 
+           </ion-icon>
+        </a>
+        <a href="https://linkedin.com/in/maykbrito" target="_blank">
+         <ion-icon  name = "logo-linkedin"> 
+         </ion-icon>
+        </a>
+        <!--para icones - ionicons-->
+
+      </div>
+
+      <footer>
+      <!--adiciona esta tag para fazer o roda pé-->
+        Feito com ♥ pela <a href="https://rocketseat.com.br/">rocketseat</a>
+      </footer>
+    </div>
+    <script 
+     type = "module"  
+     src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+    </script>  
+    <script
+      nomodule
+        src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+    </script>
+    <script src="./asstets/script.js"></script> <!--arquivo para usar o java script-->
+  </body>
+</html>
